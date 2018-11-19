@@ -23,11 +23,11 @@
     - 考虑到肺实质内部的复杂环境，提出了一种简单有效的策略来利用多级上下文信息。
 
 ## 二、METHODOLOGY
-![Framework](./image/Framework.png)
+![Framework](./image/Framework.png)  
 ### 2.1 3D-CNNs结构
 #### 2.1.1 3-D Convolutional Layer
   为了构建3D-CNN，首先需要定义一系列小的3D kernel; 然后添加偏置项,使用非线性激活函数。
-  ![Formulation](./image/Formulation.png)
+  ![Formulation](./image/Formulation.png)  
 其中：  
 > - h_l_i 和 h_l-1_k分别代表第l层的第i个3D feature volume、l-1层的第k个3D feature volume
 > - W_l_ki是连接h_l_i和h_l-1_k的3D kernel
@@ -36,7 +36,7 @@
   - 假设L层为卷积层，L+1 为紧随其后的3D池化层。最大池化层接受一个4D输入tensor T=[h_l_1,h_l_2,h_l_3,…h_l_k], 特征空间[X,Y,Z,K], K为kernel数量。
   - 给定池化 kernel 尺寸M 和步长S，池化之后，feature volume减小到 X′=(X−M/S+1)
 #### 2.1.3 Fully Connected Layer
-![Formulation2](./image/Formulation2.png)  
+![Formulation2](./image/Formulation2.png)   
   其中：
   > - h_f−1 是输入特征向量，从第 f−1层的3D feature volume压平(flatten)而来。
   > - h_f 是第 f 层的输出特征向量（是一个全连接层）
