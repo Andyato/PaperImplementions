@@ -27,7 +27,7 @@
 ### 2.1 3D-CNNs结构
 #### 2.1.1 3-D Convolutional Layer
   为了构建3D-CNN，首先需要定义一系列小的3D kernel; 然后添加偏置项,使用非线性激活函数。
-  ![Formulation](./image/formulation.png)
+  ![Formulation](./image/Formulation.png)
 其中：  
 > - h_l_i 和 h_l-1_k分别代表第l层的第i个3D feature volume、l-1层的第k个3D feature volume
 > - W_l_ki是连接h_l_i和h_l-1_k的3D kernel
